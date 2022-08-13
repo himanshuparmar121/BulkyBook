@@ -74,8 +74,8 @@ namespace BulkyBookWeb.Controllers
                 ModelState.AddModelError("name", "The DisplayOrder cannot exactly match the Name.");
             }
             if (ModelState.IsValid)
-            {
-                _db.Categories.Add(obj);
+            { 
+                _db.Categories.Update(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
